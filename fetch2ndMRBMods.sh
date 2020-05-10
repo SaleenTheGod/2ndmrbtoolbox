@@ -83,4 +83,7 @@ else
 
      sed -i '$ d' $arma_server_cfg
      echo "mods=\"${DIR_ARRAY[@]}\"" >> $arma_server_cfg
+
+
+     chown -R arma3server:arma3server /home/arma3server
 fi
