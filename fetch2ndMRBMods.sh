@@ -3,6 +3,7 @@
 # Author: James Ambrose (Saleen/Serpico)
 # Purpose: Automatic grabs an entire steam workshop nod collection for Arma 3 and downloads the mods to a directory specifed.
 # Syntax: ./fetch2ndMRBMods STEAM_USERNAME STEAM_PASSWORD
+# Requirements: steamcmd, rsync/rclone, curl
 
 current_user=$(whoami)
 steam_collection="https://steamcommunity.com/sharedfiles/filedetails/?id=1938803696" #2nd MRB mod collection
