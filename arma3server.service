@@ -1,0 +1,10 @@
+[Unit]
+Description=Arma 3 server
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=arma3server
+ExecStart=/bin/bash /home/arma3server/arma3server

@@ -1,0 +1,10 @@
+[Unit]
+Description=Teamspeak 3 server
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=ts3server
+ExecStart=/bin/bash /home/ts3server/ts3server
