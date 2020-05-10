@@ -1,9 +1,15 @@
 #! /bin/bash
 
-sudo mv *.pbo /home/arma3server/serverfiles/mpmissions/
-sudo chown -R arma3server:users /home/arma3server/serverfiles/mpmissions/
-
-if [ $1 = "restart" ]
+if [ -z "$1" ]
 then
-    sudo runuser -l arma3server -c '/home/arma3server/arma3server restart'
+    sudo mv *.pbo /home/arma3server/serverfiles/mpmissions/
+    sudo chown -R arma3server:users /home/arma3server/serverfiles/mpmissions/
+else
+    if [ $1 = "restart" ]
+    then
+        sudo mv *.pbo /home/arma3server/serverfiles/mpmissions/
+        sudo chown -R arma3server:users /home/arma3server/serverfiles/mpmissions/   
+        sudo runuser -l arma3server -c '/home/arma3server/arma3server restart'
+    fi
 fi
+
