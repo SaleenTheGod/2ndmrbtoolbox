@@ -6,7 +6,7 @@
 # Requirements: steamcmd, rsync/rclone, curl
 
 current_user=$(whoami)
-steam_collection="https://steamcommunity.com/sharedfiles/filedetails/?id=1938803696" #2nd MRB mod collection
+steam_collection="https://steamcommunity.com/sharedfiles/filedetails/?id=2123825129" #2nd MRB mod collection
 steam_game_id="107410" # Arma 3 ID
 server_mod_dir="/home/arma3server/serverfiles/mods"
 depth=0
@@ -70,7 +70,7 @@ else
           done
      done
 
-     #gets all the server directory names in the current dir, and updates the arma3server.cfg file to look for the mods ingested 
+     #gets all the server directory names in the current dir, and updates the arma3server.cfg file to look for the mods ingested
      DIR_ARRAY=()
      for dir in */
      do
