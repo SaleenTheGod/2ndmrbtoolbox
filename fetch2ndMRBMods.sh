@@ -9,6 +9,8 @@ current_user=$(whoami)
 steam_collection="https://steamcommunity.com/sharedfiles/filedetails/?id=2123825129" #2nd MRB mod collection
 steam_game_id="107410" # Arma 3 ID
 server_mod_dir="/home/arma3server/serverfiles/mods"
+server_steamapps_dir="$server_mod_dir/steamapps/workshop/content/$steam_game_id"
+server_steamapps_dir_content="$server_steamapps_dir/*"
 depth=0
 arma_server_cfg="/home/arma3server/lgsm/config-lgsm/arma3server/arma3server.cfg"
 
@@ -32,6 +34,12 @@ then
      echo "sudo su arma3server && cd ~"
      exit 1
 else
+
+     cd $server_steamapps_dir
+     mv 583496184/ /tmp/583496184
+     rm -rf $server_steamapps_dir_content
+     mv /tmp/583496184 $server_steamapps_dir
+
      cd ~/steamcmd
      curl $steam_collection > source.html
      echo "./steamcmd.sh +login "$1" "$2" +force_install_dir $server_mod_dir/ \\" > moddownload.sh
