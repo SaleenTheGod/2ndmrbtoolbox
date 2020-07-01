@@ -84,7 +84,7 @@ else
      do
           if [ ${dir::-1} != "steamapps" ]
           then
-               echo "Foud Directory ${dir}... adding to Arma mod config"
+               echo "Found Directory ${dir}... adding to Arma mod config"
                DIR_ARRAY+="mods/${dir}\;"
           fi
      done
