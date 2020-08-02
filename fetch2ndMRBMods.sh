@@ -6,7 +6,7 @@
 # Requirements: steamcmd, rsync/rclone, curl
 
 current_user=$(whoami)
-steam_collection="https://steamcommunity.com/sharedfiles/filedetails/?id=2123825129" #2nd MRB mod collection
+steam_collection="https://steamcommunity.com/sharedfiles/filedetails/?id=2178755545" #2nd MRB mod collection
 steam_game_id="107410" # Arma 3 ID
 server_mod_dir="/home/arma3server/serverfiles/mods"
 server_steamapps_dir="$server_mod_dir/steamapps/workshop/content/$steam_game_id"
